@@ -1,25 +1,68 @@
+body{
+  height: 100%;
+  display: grid;
+  /* font-family: 'Exo 2', sans-serif; */
+   /* font-family: 'PT Sans Caption', sans-serif; */
+  font-family: 'Noticia Text', serif;
+}
 
 h1 {
     text-align: center;
     font-size: 40px;
     color: white;
-    margin: 50px;
+
 }
 h2 {
     text-align: center;
     color: white;
-    margin: 50px;
+    ;
 }
+
 p {
-    left: 20%;
+    margin: auto;
     text-align: center;
     color: white;
-    font-size: 20 px;
+    font-size: 20px;
+    width: 500px;
 }
-ul {
-  display: inline;
-  text-align: center;
-  color: white;
+
+.main {
+  perspective: 2px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.parallax::after {
+  display: flex;
+  /* flex: 1 0 auto; */
+  /* position: relative; */
+  height: 100vh;
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
+  background-image: url(space.jpg);
+  background-size: 100%;
+  background-repeat: repeat;
+
+
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+
+}
+
+.content {
+  position: absolute;
+  /* display: block; */
+  z-index: -1;
+
 
 }
 #links {
@@ -27,59 +70,62 @@ ul {
     border-style: none;
     border-width: 2px;
     border-radius: 30px;
-    border-color: grey ;
     padding: 10px;
-    background-color: rgb(117, 112, 130);
-    margin: 20px;
+    background-color: rgb(176, 210, 255);
+    margin: 40px;
     color: white;
     /* opacity: 10; */
 }
-#robotics {
+
+.link {
+  text-align:center;
+  margin-top: 2%;
+}
+
+/* #robotics {
   width: 500px;
   word-wrap: normal;
   margin: 50px;
   left: 25%;
-}
+} */
 
 a {
-    color: white;
-    
+    color: rgb(10, 47, 61);
+
 }
 
-body {
-    color: black;
-    background: url(galaxy.jpg);
-    background-size: cover;
-}
 
 #me {
-    transform: rotate(90deg);
+    transform: translate(-50%, 50%) rotate(90deg);
     width: 25%;
-    margin: 50px;
-    margin-top: 100px;
-      left: 34%;
+    left: 50%;
     position: relative;
+    border-radius: 25px;
+    margin-bottom: 15%;
 }
-#robot {
-  width: 30%;
-  border-radius: 15px;
-  position: absolute;
-  z-index: -1;
-  }
 
+.row {
+  width: 100%;
+}
 .column {
     float: left;
-    width: 23%;
-    padding: 10px;
+    width: 25%;
+    margin: auto;
   }
 
 .gallery {
-  width: 100%;
+  width: 95%;
   height:auto;
   object-fit: cover;
+  vertical-align: middle;
+  object-fit: contain;
+  border-radius: 15px;
 }
 
-
+/* .flower {
+  width: 100%;
+  height: inherit;
+}
 .dog {
-  transform: rotate(270deg);
-}
+
+} */
