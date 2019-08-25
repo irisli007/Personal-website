@@ -29,7 +29,7 @@ p {
 .main {
   perspective: 2px;
   transform-style: preserve-3d;
-  height: 100vh;
+  height: 100vh  ;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
@@ -39,8 +39,8 @@ p {
   display: flex;
   /* flex: 1 0 auto; */
   /* position: relative; */
-  height: 100vh;
-  transform: translateZ(-1px) scale(1.5);
+  height:200%;
+  transform: translateZ(-1px) scale(1.5) translateY(120px);
   z-index: -1;
   background-image: url(space.jpg);
   background-size: 100%;
@@ -74,7 +74,6 @@ p {
     background-color: rgb(176, 210, 255);
     margin: 40px;
     color: white;
-    /* opacity: 10; */
 }
 
 .link {
@@ -93,8 +92,10 @@ a {
     color: rgb(10, 47, 61);
 
 }
+.home{
+  border-style: none;
 
-
+}
 #me {
     transform: translate(-50%, 50%) rotate(90deg);
     width: 25%;
@@ -117,15 +118,12 @@ a {
   width: 95%;
   height:auto;
   object-fit: cover;
-  vertical-align: middle;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
   object-fit: contain;
   border-radius: 15px;
-}
 
-/* .flower {
-  width: 100%;
-  height: inherit;
 }
-.dog {
-
-} */
+.gallery:hover {
+  opacity:0.8;
+}
